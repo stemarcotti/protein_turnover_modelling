@@ -25,7 +25,7 @@ data_log = table2array(data_log);
 % set parameters
 prompt = {'Time interval [min]', ...
     'Starting time experiment [h]',...
-    'Finish time experiment [h]'};
+    'Finishing time experiment [h]'};
 title_prompt = 'User parameters';
 dims = [1 35];
 definput = {'2','-10','30'};
