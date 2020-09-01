@@ -76,9 +76,9 @@ end
 
 %% Save output as .csv files %%
 
-writetable(array2table(Sp_star), fullfile(d,'Sp_star.csv'), 'WriteVariableNames', 0)
-writetable(array2table(Dp_star), fullfile(d,'Dp_star.csv'), 'WriteVariableNames', 0)
-writetable(array2table(Sp_star_confidence_intervals), fullfile(d,'Sp_star_confidence_intervals.csv'), 'WriteVariableNames', 0)
-writetable(array2table(Dp_star_confidence_intervals), fullfile(d,'Dp_star_confidence_intervals.csv'), 'WriteVariableNames', 0)
+writetable(array2table(Sp_star), fullfile(d,'anterograde_Sp_star.csv'), 'WriteVariableNames', 0)
+writetable(array2table(Dp_star), fullfile(d,'anterograde_Dp_star.csv'), 'WriteVariableNames', 0)
+writetable(array2table(Sp_star_confidence_intervals), fullfile(d,'anterograde_Sp_star_confidence_intervals.csv'), 'WriteVariableNames', 0)
+writetable(array2table(Dp_star_confidence_intervals), fullfile(d,'anterograde_Dp_star_confidence_intervals.csv'), 'WriteVariableNames', 0)
 
 clear; clc
