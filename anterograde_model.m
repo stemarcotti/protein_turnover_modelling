@@ -1,7 +1,12 @@
 %% ANTEROGRADE MODELLING %%
 % This code takes as input the fitted mRNA and the logistic parameters of
 % the protein of choice. It calculates the turnover rates for synthesis and
-% degradation. 
+% degradation.
+
+% Solve numerically for P(t) by using as input the experimental mRNA data M(t) as input
+% The synthesis and degradation rates Sp and Dp are calculated by non-linear regression 
+% between the calculated solution and the corresponding experimental data 
+
 % See for reference Matsubayashi, Y, Sánchez-Sánchez, BJ, et al. Developmental Cell (2020).
 % Copyright - Stefania Marcotti (Stramer lab) 2020
 % For issues please contact us at https://www.stramerlab.com/contact.html
