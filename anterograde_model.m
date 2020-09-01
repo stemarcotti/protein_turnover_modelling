@@ -13,6 +13,7 @@ uiwait(msgbox('Import fitted mRNA (.csv file)'))
 [file, d] = uigetfile('*.csv');
 data = readtable(fullfile(d,file));
 data = table2array(data);
+data(any(isnan(data), 2), :) = [];
 time = data(:,1);
 mRNA = data(:,2);
 
@@ -33,8 +34,8 @@ user_answer = inputdlg(prompt,title_prompt,dims,definput);
 
 % define temporal span
 delta_t = str2double(user_answer{1,1})/60;	% [h]
-time_exp = (str2double(user_answer{2,1}):delta_t:str2double(user_answer{3,1}))';	% [h]
-idx = find(time >= min(time_exp) & time <= max(time_exp));
+idx = find(time >= str2double(user_answer{2,1}) & time <= str2double(user_answer{3,1}));
+time_exp = time(idx);	% [h]
 mRNA = mRNA(idx);
 
 % set initial values for fitting
