@@ -16,7 +16,7 @@
 % import fitted mRNA
 uiwait(msgbox('Import fitted mRNA (.csv file)'))
 [file, d] = uigetfile('*.csv');
-data = readtable(fullfile(d,file));
+data = readtable(fullfile(d,file), 'ReadVariableNames', 0);
 data = table2array(data);
 data(any(isnan(data), 2), :) = [];
 time = data(:,1);
@@ -25,7 +25,7 @@ mRNA = data(:,2);
 % import logistic parameters for sample of choice
 uiwait(msgbox('Import logistic parameters for protein (.csv file)'))
 [file_log, d_log] = uigetfile('*.csv');
-data_log = readtable(fullfile(d_log, file_log));
+data_log = readtable(fullfile(d_log, file_log), 'ReadVariableNames', 0);
 data_log = table2array(data_log);
 
 % set parameters
@@ -34,8 +34,7 @@ prompt = {'Time interval [min]', ...
     'Finishing time experiment [h]'};
 title_prompt = 'User parameters';
 dims = [1 35];
-definput = {'2','-10','30'};
-user_answer = inputdlg(prompt,title_prompt,dims,definput);
+user_answer = inputdlg(prompt,title_prompt,dims);
 
 % define temporal span
 delta_t = str2double(user_answer{1,1})/60;	% [h]
