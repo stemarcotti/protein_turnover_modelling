@@ -1,6 +1,6 @@
 # Protein Turnover Modelling
 
-See for reference [Matsubayashi, Y, Sánchez-Sánchez, BJ, et al. Developmental Cell (2020)](https://www.cell.com/developmental-cell/fulltext/S1534-5807(20)30455-X). An additional protocol paper is currently work in progress, a link will be added here when available. Copyright - Stefania Marcotti (Stramer lab) 2020, Code tested on MATLAB v.2018b. For issues please contact us at https://www.stramerlab.com/contact.html
+See for reference [Matsubayashi, Y, Sánchez-Sánchez, BJ, et al. Developmental Cell (2020)](https://www.cell.com/developmental-cell/fulltext/S1534-5807(20)30455-X). A step-by-step protocol paper specifying how to perform this analysis on your data is available here [Marcotti, S, et al. STAR Protocols (2021)](https://star-protocols.cell.com/protocols/523). Copyright - Stefania Marcotti (Stramer lab) 2020, Code tested on MATLAB v.2018b. For issues please contact us at https://www.stramerlab.com/contact.html
 
 #### Anterograde modelling `[anterograde_model.m]`
 This code takes as input the fitted mRNA and the logistic parameters of the protein of choice. It calculates the turnover rates for synthesis and degradation. It calls the function `[anterograde_funct.m]`.
